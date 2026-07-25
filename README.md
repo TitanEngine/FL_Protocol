@@ -9,7 +9,7 @@ FL Protocol is an enterprise-grade, bare-metal indexing engine engineered for su
 
 ---
 
-##  Executive Non-Technical Architecture Summary
+##  Architecture Summary
 
 For non-technical stakeholders and system analysts, traditional search indexing vs. FL Protocol can be compared to a **Digital Library Card Catalog**:
 * **Traditional Indexing Systems (Elasticsearch, Grep):** When a single line or symbol is edited, the system must pause and reconstruct the global index table from scratch (**High CPU Overhead, Noticeable Delays**).
@@ -29,7 +29,7 @@ For non-technical stakeholders and system analysts, traditional search indexing 
 
 ---
 
-## 📊 Public Performance Benchmark Matrix
+## Performance Benchmark Matrix
 
 ### 1. Index Construction Latency vs. Scale Tiers
 
