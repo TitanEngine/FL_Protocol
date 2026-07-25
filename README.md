@@ -1,4 +1,4 @@
-# ⚡ FL PROTOCOL ENGINE: HIGH-PERFORMANCE SUBLINEAR CODE INTELLIGENCE SUBSTRATE
+# FL PROTOCOL ENGINE: HIGH-PERFORMANCE SUBLINEAR CODE INTELLIGENCE SUBSTRATE
 
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)](https://github.com/)
 [![Language: Rust 2021](https://img.shields.io/badge/Language-Rust_1.95+-orange.svg)](https://www.rust-lang.org/)
@@ -9,7 +9,7 @@ FL Protocol is an enterprise-grade, bare-metal indexing engine engineered for su
 
 ---
 
-## 🛡️ Executive Non-Technical Architecture Summary
+##  Executive Non-Technical Architecture Summary
 
 For non-technical stakeholders and system analysts, traditional search indexing vs. FL Protocol can be compared to a **Digital Library Card Catalog**:
 * **Traditional Indexing Systems (Elasticsearch, Grep):** When a single line or symbol is edited, the system must pause and reconstruct the global index table from scratch (**High CPU Overhead, Noticeable Delays**).
@@ -17,7 +17,7 @@ For non-technical stakeholders and system analysts, traditional search indexing 
 
 ---
 
-## ⚡ Core Technical & Performance Invariants
+##  Core Technical & Performance Invariants
 
 | Capability / Metric | Performance Benchmark | Industry Standard Comparison | Technical Invariant |
 | :--- | :--- | :--- | :--- |
@@ -33,7 +33,7 @@ For non-technical stakeholders and system analysts, traditional search indexing 
 
 ### 1. Index Construction Latency vs. Scale Tiers
 
-![Chart 1: Rebuild Latency vs Scale](C:/Users/ameen/.gemini/antigravity-ide/brain/8e4b35d4-0378-4acb-9324-3f32a7242b64/chart_1_rebuild_latency.png)
+![Chart 1: Rebuild Latency vs Scale](assets/chart_1_rebuild_latency.png)
 
 | Scale Tier | Total Substrate Nodes | Cold Index Rebuild (ms) | Warm Index Rebuild (ms) | Active RAM (MB) | Mean Query Latency |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -46,7 +46,7 @@ For non-technical stakeholders and system analysts, traditional search indexing 
 
 ### 2. Sub-Microsecond Search Query Latency (O(1) Flat Curve)
 
-![Chart 3: O(1) Prefix Search Latency Curve](C:/Users/ameen/.gemini/antigravity-ide/brain/8e4b35d4-0378-4acb-9324-3f32a7242b64/chart_3_lookup_latency.png)
+![Chart 3: O(1) Prefix Search Latency Curve](assets/chart_3_lookup_latency.png)
 
 As demonstrated in the empirical benchmark graph above, search query latency remains completely flat between **150 ns and 310 ns** regardless of whether searching 100 files or 100,000 files.
 
@@ -54,7 +54,7 @@ As demonstrated in the empirical benchmark graph above, search query latency rem
 
 ### 3. Allocation Block Mutability & Zero Table Re-indexing Cost
 
-![Chart 4: Block Operations and Zero Table Reconstruction](C:/Users/ameen/.gemini/antigravity-ide/brain/8e4b35d4-0378-4acb-9324-3f32a7242b64/chart_4_room_operations.png)
+![Chart 4: Block Operations and Zero Table Reconstruction](assets/chart_4_room_operations.png)
 
 | Operation Type | Execution Time (μs) | Execution Time (ns) | Table Re-index Time (ms) | Complexity Verification |
 | :--- | :--- | :--- | :--- | :--- |
@@ -64,6 +64,6 @@ As demonstrated in the empirical benchmark graph above, search query latency rem
 
 ---
 
-## 🔒 Security & Intellectual Property Notice
+## Security & Intellectual Property Notice
 
 This codebase and repository documentation contain proprietary architecture specifications, trade secrets, and patent-pending algorithms owned by FL Protocol. Unauthorized reverse engineering, decompilation, or structural mapping is strictly prohibited.
