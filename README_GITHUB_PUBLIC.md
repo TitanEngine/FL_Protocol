@@ -21,11 +21,11 @@ For non-technical stakeholders and system analysts, traditional search indexing 
 
 | Capability / Metric | Performance Benchmark | Industry Standard Comparison | Technical Invariant |
 | :--- | :--- | :--- | :--- |
-| **Prefix Search Latency** | **`120 ns - 260 ns`** ($0.12 - 0.26\text{ μs}$) | Elastic/Grep: $15 - 150\text{ ms}$ | **$O(1)$ Constant Time Latency** |
-| **Block Slot Append Latency** | **`2.9 ns`** ($0.0029\text{ μs}$) | Traditional DB: $500\text{ ns}$ | **Sub-nanosecond Mutation** |
-| **Slot In-Place Edit / Delete** | **`< 1.0 ns`** ($< 0.0001\text{ μs}$) | Full Re-index: $50\text{ ms}$ | **Atomic L1 Cache Mutation** |
-| **Routing Table Re-indexing Cost** | Strictly **`0.00 ms`** | Re-index Pause: $100 - 500\text{ ms}$ | **Zero Substrate Reconstruction** |
-| **Tokenizer Ingestion Speed** | **`3.4 Million Tokens / Sec`** | Standard Lexers: $500\text{K tokens/s}$ | **Zero-Copy Memory Stream** |
+| **Prefix Search Latency** | **`120 ns - 260 ns`** (0.12 - 0.26 μs) | Elastic/Grep: 15 - 150 ms | **O(1) Constant Time Latency** |
+| **Block Slot Append Latency** | **`2.9 ns`** (0.0029 μs) | Traditional DB: 500 ns | **Sub-nanosecond Mutation** |
+| **Slot In-Place Edit / Delete** | **`< 1.0 ns`** (< 0.0001 μs) | Full Re-index: 50 ms | **Atomic L1 Cache Mutation** |
+| **Routing Table Re-indexing Cost** | Strictly **`0.00 ms`** | Re-index Pause: 100 - 500 ms | **Zero Substrate Reconstruction** |
+| **Tokenizer Ingestion Speed** | **`3.4 Million Tokens / Sec`** | Standard Lexers: 500K tokens/s | **Zero-Copy Memory Stream** |
 
 ---
 
@@ -44,7 +44,7 @@ For non-technical stakeholders and system analysts, traditional search indexing 
 
 ---
 
-### 2. Sub-Microsecond Search Query Latency ($O(1)$ Flat Curve)
+### 2. Sub-Microsecond Search Query Latency (O(1) Flat Curve)
 
 ![Chart 3: O(1) Prefix Search Latency Curve](C:/Users/ameen/.gemini/antigravity-ide/brain/8e4b35d4-0378-4acb-9324-3f32a7242b64/chart_3_lookup_latency.png)
 
@@ -56,12 +56,11 @@ As demonstrated in the empirical benchmark graph above, search query latency rem
 
 ![Chart 4: Block Operations and Zero Table Reconstruction](C:/Users/ameen/.gemini/antigravity-ide/brain/8e4b35d4-0378-4acb-9324-3f32a7242b64/chart_4_room_operations.png)
 
-```csv
-Operation_Type,Execution_Time_us,Table_Reindex_Time_ms,Complexity_Verification
-Block_Offset_Append,0.0029,0.00,O(1)  PASS
-Block_Inplace_Edit,0.0000,0.00,O(1)  PASS
-Block_Unbind_Delete,0.0000,0.00,O(1)  PASS
-```
+| Operation Type | Execution Time (μs) | Execution Time (ns) | Table Re-index Time (ms) | Complexity Verification |
+| :--- | :--- | :--- | :--- | :--- |
+| **Block Offset Append** | 0.0029 μs | **2.9 ns** | 0.00 ms | **O(1) PASS** |
+| **Block In-Place Edit** | < 0.0001 μs | **< 1.0 ns** | 0.00 ms | **O(1) PASS** |
+| **Block Unbind Delete** | < 0.0001 μs | **< 1.0 ns** | 0.00 ms | **O(1) PASS** |
 
 ---
 
